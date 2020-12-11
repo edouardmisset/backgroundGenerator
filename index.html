@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/script.js">
+      <label for="in1">Input 1:</label><br />
+      <input
+        type="text"
+        id="in1"
+        name="in1"
+        placeholder="John"
+        autofocus
+      /><br />
+      <label for="in2">Input 2:</label><br />
+      <input type="text" id="in2" name="in2" placeholder="Doe" /><br /><br />
+      <input type="button" value="Do Something" onclick="myFunction()" />
+      <br /><br />
+      <label for="result">Result:</label><br />
+      <p id="result"></p>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
