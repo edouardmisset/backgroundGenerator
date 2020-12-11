@@ -4,6 +4,7 @@ html {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #3b90a4, #f55467);
 }
 
 .header {
