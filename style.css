@@ -22,6 +22,7 @@ span {
   display: block;
 }
 
-p {
+code {
+  display: block;
   text-align: center;
 }
