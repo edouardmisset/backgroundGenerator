@@ -4,11 +4,13 @@ html {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #3b90a4, #f55467);
+  background: linear-gradient(to bottom right, #2ad2f8, #fb2a42);
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .header {
-  color: rgba(24, 24, 24, 0.63);
+  color: rgba(0, 0, 0, 0.5);
   transform: uppercase;
 }
 
@@ -18,4 +20,8 @@ body {
 
 span {
   display: block;
+}
+
+p {
+  text-align: center;
 }
