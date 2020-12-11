@@ -1,14 +1,47 @@
-var a = "Some String ";
-var destination = document.getElementById("result");
+var backgroundCSS = "",
+  destination = document.querySelector("p"),
+  body = document.querySelector("body"),
+  colorInputs = document.querySelectorAll("input"),
+  firstColor = document.getElementById("firstColor").value,
+  secondColor = document.getElementById("secondColor").value,
+  sourceElement = "";
 
-var in1 = document.getElementById("in1").value;
-var in2 = document.getElementById("in2").value;
+function addingListeners() {
+  colorInputs.forEach((element) => {
+    element.addEventListener("input", update);
+    element.addEventListener("change", update);
+  });
+}
 
-function myFunction(in1, in2) {
-  if (in1 === undefined || in2 === undefined) {
-    console.log("input 1 or input 2 is empty");
-    console.log("in1: " + in1 + " in2: " + in2);
+addingListeners();
+displayCSSBackground();
+
+function update(event) {
+  sourceElement = event.target;
+
+  console.log(
+    "🚀 ~ file: script.js ~ line 17 ~ update ~ genericColor",
+    sourceElement
+  );
+
+  if (sourceElement === colorInputs[0]) {
+    firstColor = sourceElement.value;
+  } else if (sourceElement === colorInputs[1]) {
+    secondColor = sourceElement.value;
   } else {
-    destination.innerHTML = a + in1 + in2;
+    return 0;
   }
+
+  displayCSSBackground();
+  setBackgroundColors();
+}
+
+function displayCSSBackground() {
+  backgroundCSS = `linear-gradient(to bottom right, ${firstColor},${secondColor})`;
+  destination.textContent = backgroundCSS;
+}
+
+// Create a function to set the CSS property "background" = linear-gradient(to bottom right, firstColor, secondColor)
+function setBackgroundColors() {
+  body.style.background = `linear-gradient(to bottom right, ${firstColor},${secondColor})`;
 }
