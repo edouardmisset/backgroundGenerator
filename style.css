@@ -1,3 +1,20 @@
 html {
   margin: 0;
 }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  color: rgba(24, 24, 24, 0.63);
+  transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+span {
+  display: block;
+}
