@@ -3,15 +3,23 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom right, #2ad2f8, #fb2a42);
   background-repeat: no-repeat;
   height: 100vh;
 }
 
 .header {
-  color: rgba(0, 0, 0, 0.5);
-  transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
 }
 
 .center {
@@ -20,9 +28,11 @@ body {
 
 span {
   display: block;
+  font-size: 1.5em;
 }
 
 code {
   display: block;
   text-align: center;
+  font-size: 1.5em;
 }
