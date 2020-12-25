@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/edouardmisset/backgroundGenerator/issues"
   },
-  "homepage": "https://github.com/edouardmisset/backgroundGenerator#readme"
+  "homepage": "https://github.com/edouardmisset/backgroundGenerator#readme",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
 }
