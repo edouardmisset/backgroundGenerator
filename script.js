@@ -1,10 +1,11 @@
-var backgroundCSS = "",
-  destination = document.querySelector("code"),
+const destination = document.querySelector("code"),
   body = document.querySelector("body"),
   colorInputs = document.querySelectorAll("input"),
   firstColor = document.getElementById("firstColor"),
   secondColor = document.getElementById("secondColor"),
   randomButton = document.getElementById("random");
+
+let backgroundCSS = "";
 
 // Adding two event listeners of type input to the color pickers.
 firstColor.addEventListener("input", update);
@@ -21,19 +22,21 @@ function update() {
 }
 
 function createRandomHEX() {
-  var r, g, b, hex;
-
-  r = Math.floor(Math.random() * 255);
-  g = Math.floor(Math.random() * 255);
-  b = Math.floor(Math.random() * 255);
-  // FIXME: the hex values are sometimes 1 digit which causes invalid Hex colors (5 hex digits when it should be 6). How to fix that ?
-  hex = "#" + r.toString(16) + g.toString(16) + b.toString(16);
-  return hex;
+  let r, g, b;
+  r = randomHEX();
+  g = randomHEX();
+  b = randomHEX();
+  return `#${r}${g}${b}`;
 }
 
 function randomizer() {
   firstColor.value = createRandomHEX();
   secondColor.value = createRandomHEX();
-
   update();
 }
+
+const randomHEX = () => {
+  let rand = Math.floor(Math.random() * 255).toString(16);
+  rand.length === 1 ? (rand = `0${rand}`) : 1;
+  return rand;
+};
